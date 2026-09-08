@@ -1,3 +1,10 @@
+@font-face{font-family:"Source Sans 3";src:url("fonts/source-sans-3-latin.woff2") format("woff2");font-style:normal;font-weight:400 700;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("fonts/barlow-condensed-500.woff2") format("woff2");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("fonts/barlow-condensed-600.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("fonts/barlow-condensed-700.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("fonts/barlow-condensed-500-italic.woff2") format("woff2");font-style:italic;font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url("fonts/barlow-condensed-600-italic.woff2") format("woff2");font-style:italic;font-weight:600;font-display:swap}
+
 /* ═══════════════════════════════════════════════════════════
    BUSTOURISTIK REVERMANN · gemeinsames Stylesheet (alle Seiten)
    ═══════════════════════════════════════════════════════════ */
@@ -22,6 +29,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-fo
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:0;background:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .container{width:min(1200px,92vw);margin-inline:auto}
 .narrow{width:min(1100px,88vw);margin-inline:auto}
 
@@ -53,7 +61,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 .nav-shell{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;background:rgba(255,255,255,.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border:1px solid rgba(20,20,20,.06);padding:.6rem .6rem .6rem 1.3rem;border-radius:999px;box-shadow:var(--shadow-md)}
 .logo img{height:46px;width:auto;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:.15rem}
-.nav-links>a,.dropdown>button{display:inline-flex;align-items:center;gap:.3rem;padding:.55rem .8rem;border-radius:999px;font-size:.9rem;color:var(--ink-soft);font-weight:500;font-family:inherit;transition:background .2s,color .2s}
+.nav-links>a,.dropdown>button{display:inline-flex;align-items:center;gap:.3rem;padding:.55rem .8rem;border-radius:999px;font-size:.82rem;color:var(--ink-soft);font-weight:700;font-family:inherit;letter-spacing:.075em;text-transform:uppercase;transition:background .2s,color .2s}
 .nav-links>a:hover,.dropdown>button:hover,.dropdown.open>button{background:var(--paper-2);color:var(--ink)}
 .nav-links>a.active{background:var(--gold-50);color:var(--gold-dark);font-weight:600}
 .dropdown{position:relative}
@@ -61,7 +69,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 .dropdown.open .chev{transform:rotate(180deg)}
 .dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(-6px);background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:.5rem;min-width:250px;opacity:0;visibility:hidden;transition:opacity .22s var(--ease),transform .22s var(--ease),visibility .22s}
 .dropdown.open .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.dropdown-menu a{display:block;padding:.6rem .85rem;border-radius:12px;font-size:.9rem;color:var(--ink-soft)}
+.dropdown-menu a{display:block;padding:.6rem .85rem;border-radius:12px;font-size:.78rem;color:var(--ink-soft);font-weight:700;letter-spacing:.065em;text-transform:uppercase}
 .dropdown-menu a:hover{background:var(--gold-50);color:var(--ink)}
 .dropdown-menu .sep{height:1px;background:var(--line);margin:.4rem .85rem}
 .nav-right{display:flex;align-items:center;gap:.5rem}
@@ -75,7 +83,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none}
 .mobile-menu .mm-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
 .mobile-menu .mm-top img{height:42px;width:auto}
 .mobile-menu .close{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center}
-.mobile-menu>a{font-family:var(--serif);font-size:1.5rem;padding:.55rem 0;border-bottom:1px solid var(--line);font-weight:600}
+.mobile-menu>a{font-family:var(--serif);font-size:1.5rem;padding:.55rem 0;border-bottom:1px solid var(--line);font-weight:700;letter-spacing:.055em;text-transform:uppercase}
 .mobile-menu .mm-sub{font-size:.95rem;font-family:var(--sans);color:var(--mute);padding:.4rem 0 .4rem 1rem;border:0}
 .mobile-menu .btn{margin-top:1.6rem}
 
@@ -309,6 +317,13 @@ section{padding:5.5rem 0}
 .bike-feature .bf-ico svg{width:21px;height:21px}
 .bike-feature b{display:block;font-size:.95rem;margin-bottom:.2rem}
 .bike-feature span{font-size:.86rem;color:var(--mute)}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.audience-card{background:var(--white);border:1px solid rgba(20,20,20,.05);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.audience-card h3{font-family:var(--serif);font-size:1.35rem;line-height:1.1;margin:0 0 .5rem}
+.audience-card p{font-size:.92rem;color:var(--mute);margin:0}
+.region-note{margin-top:2rem;background:var(--navy);color:#fff;border-radius:var(--radius);padding:1.5rem 1.7rem}
+.region-note b{display:block;font-family:var(--serif);font-size:1.3rem;margin-bottom:.35rem}
+.region-note p{color:#c9d0dc;margin:0;max-width:76ch}
 .bike-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1.5rem}
 .bike-gallery figure{margin:0;border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:3/2;background:#ddd}
 .bike-gallery img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
@@ -386,7 +401,7 @@ footer.site-footer{background:var(--navy-deep);color:#c9d0dc;padding:4.5rem 0 2r
 .footer-grid ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
 .footer-grid a{color:#c9d0dc;font-size:.91rem;transition:color .2s}
 .footer-grid a:hover{color:var(--gold-lite)}
-.footer-brand img{height:52px;width:auto;margin-bottom:1rem}
+.footer-brand img{height:72px;width:auto;max-width:100%;object-fit:contain;margin-bottom:1rem}
 .footer-brand p{color:#8d97a8;font-size:.91rem;max-width:34ch;margin:0 0 1.4rem}
 .newsletter{display:flex;gap:.4rem;background:rgba(255,255,255,.06);padding:.35rem;border-radius:999px;border:1px solid rgba(255,255,255,.09);max-width:360px}
 .newsletter input{background:transparent;border:0;color:#fff;padding:.6rem 1rem;flex:1;font-family:inherit;font-size:.9rem;outline:none;min-width:0}
@@ -418,7 +433,7 @@ footer.site-footer{background:var(--navy-deep);color:#c9d0dc;padding:4.5rem 0 2r
 @media (max-width:1024px){
   .hero-grid,.cruise-intro,.bike-hero,.cruise-form-wrap,.td-head{grid-template-columns:1fr;gap:2.2rem}
   .hero-visual{height:440px}
-  .fields-grid,.trip-grid,.trip-grid-wide,.reederei-grid,.bike-features{grid-template-columns:repeat(2,1fr)}
+  .fields-grid,.trip-grid,.trip-grid-wide,.reederei-grid,.bike-features,.audience-grid{grid-template-columns:repeat(2,1fr)}
   .feature-grid{grid-template-columns:repeat(3,1fr)}
   .booking .book-grid,.personal-cta,.protect-card,.contact-card,.artland,.cta-band{grid-template-columns:1fr}
   .personal-cta,.protect-card,.contact-card,.artland{padding:2.5rem}
@@ -438,7 +453,7 @@ footer.site-footer{background:var(--navy-deep);color:#c9d0dc;padding:4.5rem 0 2r
   .logo img{height:38px}
   section{padding:3.5rem 0}
   .form-card{padding:1.5rem;grid-template-columns:1fr}
-  .fields-grid,.trip-grid,.trip-grid-wide,.reederei-grid,.bike-features,.feature-grid{grid-template-columns:1fr}
+  .fields-grid,.trip-grid,.trip-grid-wide,.reederei-grid,.bike-features,.audience-grid,.feature-grid{grid-template-columns:1fr}
   .bike-gallery,.cv-dest{grid-template-columns:repeat(2,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
   .footer-grid{grid-template-columns:1fr;gap:2rem}

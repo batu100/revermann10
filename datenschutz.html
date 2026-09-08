@@ -1,19 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d1a2e">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <title>Datenschutz · Bustouristik Revermann</title>
 <meta name="description" content="Datenschutzerklärung der Bustouristik Revermann.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.revermann.de/datenschutz">
+<link rel="canonical" href="https://revermann.de/datenschutz">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Datenschutz · Bustouristik Revermann">
 <meta property="og:description" content="Datenschutzerklärung der Bustouristik Revermann.">
 <meta property="og:locale" content="de_DE">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:site_name" content="Bustouristik Revermann">
+<meta property="og:url" content="https://revermann.de/datenschutz">
+<meta property="og:image" content="https://revermann.de/assets/img/bus-revermann-bruessel.jpg">
+<meta property="og:image:alt" content="Datenschutz · Bustouristik Revermann">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -25,11 +29,11 @@
     <nav class="nav-links" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
       <div class="dropdown" id="ddReisen">
-        <button aria-expanded="false" aria-haspopup="true" style="">
+        <button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="reisenMenu" style="">
           Reisen
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
         </button>
-        <div class="dropdown-menu" role="menu">
+        <div class="dropdown-menu" id="reisenMenu">
           <a href="busreisen.html">Busreisen &amp; Tagesfahrten</a>
           <a href="skireise-karlsbad.html">Skireise Karlsbad</a>
           <a href="gruppenreisen.html">Gruppen- &amp; Vereinsreisen</a>
@@ -43,7 +47,7 @@
     <div class="nav-right">
       <a href="tel:+491723415004" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> 0172 3415004</a>
       <a href="kontakt.html" class="btn btn-primary">Reise anfragen <span class="arr">→</span></a>
-      <button class="menu-btn" id="menuOpen" aria-label="Menü öffnen">
+      <button type="button" class="menu-btn" id="menuOpen" aria-label="Menü öffnen" aria-controls="mobileMenu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
@@ -53,7 +57,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mm-top">
     <img src="assets/img/logo.png" alt="Bustouristik Revermann">
-    <button class="close" id="menuClose" aria-label="Menü schließen">
+    <button type="button" class="close" id="menuClose" aria-label="Menü schließen">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
   </div>
@@ -82,15 +86,24 @@
   <div class="container">
     <div class="legal-body reveal">
       <h2>Verantwortlicher</h2>
-      <p>Frank Revermann · Bustouristik Revermann<br>Frehorster Straße 109 · 49635 Badbergen / Gr. Mimmelage<br>Telefon: 05431 3415 · E-Mail: info@revermann.de</p>
-      <h2>Kontakt- und Anfrageformulare</h2>
-      <p>Wenn Sie uns über ein Formular auf dieser Website kontaktieren, wird beim Absenden Ihr E-Mail-Programm mit den von Ihnen eingegebenen Angaben geöffnet. Die Übermittlung erfolgt anschließend als E-Mail an info@revermann.de. Wir verarbeiten diese Daten ausschließlich zur Bearbeitung Ihrer Anfrage.</p>
+      <p>Frank Revermann · Bustouristik Revermann<br>Frehorster Straße 109 · 49635 Badbergen / Gr. Mimmelage<br>Festnetz: 05431 3415 · Mobil: 0172 3415004 · E-Mail: info@revermann.de</p>
+      <h2>Hosting und Server-Protokolle</h2>
+      <p>Diese Website wird über Vercel bereitgestellt. Beim Aufruf können technisch erforderliche Daten verarbeitet werden, insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite beziehungsweise Datei, übertragene Datenmenge, Browser- und Geräteinformationen sowie die zuvor besuchte Seite. Die Verarbeitung dient der sicheren, stabilen und fehlerfreien Bereitstellung der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt im sicheren und zuverlässigen Betrieb unseres Internetauftritts.</p>
+      <p>Empfänger beziehungsweise Auftragsverarbeiter ist Vercel Inc., USA. Soweit Daten in Drittländer übermittelt werden, erfolgt dies nach Maßgabe der von Vercel bereitgestellten Datenschutzvereinbarungen und geeigneten Garantien. Weitere Informationen finden Sie in der <a href="https://vercel.com/legal/privacy-notice">Datenschutzerklärung von Vercel</a>. Protokolldaten werden gelöscht, sobald sie für die genannten Zwecke nicht mehr erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <h2>Kontakt, Anfrageformulare und Newsletter</h2>
+      <p>Die Formulare dieser Website übertragen keine Daten im Hintergrund an einen Formularanbieter. Beim Absenden wird auf Ihrem Gerät eine vorbereitete E-Mail geöffnet. Erst wenn Sie diese E-Mail selbst versenden, werden Ihre Angaben an info@revermann.de übermittelt. Gleiches gilt für die Newsletter-Anmeldung.</p>
+      <p>Wir verarbeiten Ihre Angaben zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit es um vorvertragliche Maßnahmen oder einen Vertrag geht, ansonsten Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an der Bearbeitung von Anfragen. Eine Newsletter-Anmeldung wird auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO verarbeitet; Sie können diese jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+      <p>Die Daten werden gelöscht, wenn die jeweilige Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten oder berechtigten Gründe für eine weitere Speicherung bestehen. Gesetzlich aufbewahrungspflichtige Geschäftsunterlagen werden für die Dauer der jeweiligen Aufbewahrungsfrist gespeichert.</p>
       <h2>Externe Links &amp; Dienste</h2>
       <p>Diese Website verweist auf externe Angebote (u. a. Reederei-Websites sowie das Buchungsportal der HanseMerkur für den Reiseschutz). Für die dortige Datenverarbeitung gelten die Datenschutzhinweise der jeweiligen Anbieter.</p>
       <h2>Schriftarten</h2>
-      <p>Diese Website lädt Schriftarten von Google Fonts. Dabei kann Ihre IP-Adresse an Google übertragen werden.</p>
+      <p>Die verwendeten Schriftarten werden lokal von unserem Webserver geladen. Beim Seitenaufruf wird deshalb keine Verbindung zu Google Fonts hergestellt.</p>
+      <h2>Cookies und Analyse</h2>
+      <p>Diese Website setzt keine Analyse-, Marketing- oder Tracking-Cookies ein und verwendet kein externes Analysewerkzeug.</p>
       <h2>Ihre Rechte</h2>
-      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Außerdem besteht ein Beschwerderecht bei einer zuständigen Datenschutzaufsichtsbehörde.</p>
+      <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+      <p>Sie können sich außerdem bei einer Datenschutzaufsichtsbehörde beschweren. Für Unternehmen mit Sitz in Niedersachsen ist insbesondere der <a href="https://www.lfd.niedersachsen.de/beschwerde">Landesbeauftragte für den Datenschutz Niedersachsen</a> zuständig.</p>
+      <p><small>Stand: September 2026</small></p>
 
     </div>
   </div>
@@ -99,10 +112,10 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/img/logo-light.png" alt="Bustouristik Revermann" width="460" height="157">
+        <img src="assets/img/logo-footer.png" alt="Bustouristik Revermann – Ihr Reisepartner aus dem Artland" width="920" height="314" loading="lazy" decoding="async">
         <p>Ihr Reisepartner aus dem Artland. Busreisen, Kreuzfahrten, Radreisen und Gruppenfahrten – persönlich beraten und zuverlässig organisiert.</p>
         <form class="newsletter" id="newsletterForm">
-          <input type="email" placeholder="E-Mail für Reise-Tipps" aria-label="E-Mail-Adresse">
+          <input type="email" name="email" autocomplete="email" required placeholder="E-Mail für Reise-Tipps" aria-label="E-Mail-Adresse">
           <button type="submit">Anmelden</button>
         </form>
       </div>
@@ -130,7 +143,8 @@
         <ul>
           <li><a href="reiseschutz.html">Reiseschutz</a></li>
           <li><a href="kontakt.html">Kontakt &amp; Anfrage</a></li>
-          <li><a href="tel:+491723415004">0172 3415004</a></li>
+          <li><a href="tel:+491723415004">Mobil: 0172 3415004</a></li>
+          <li><a href="tel:+4954313415">Festnetz: 05431 3415</a></li>
           <li><a href="mailto:info@revermann.de">info@revermann.de</a></li>
         </ul>
       </div>
