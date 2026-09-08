@@ -23,11 +23,17 @@ if (dd){
   ddBtn.addEventListener('click', e => {
     e.stopPropagation();
     const open = dd.classList.toggle('open');
-    ddBtn.setAttribute('aria-expanded', open);
+    ddBtn.setAttribute('aria-expanded', String(open));
   });
   document.addEventListener('click', () => {
     dd.classList.remove('open');
     ddBtn.setAttribute('aria-expanded', 'false');
+  });
+  dd.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    dd.classList.remove('open');
+    ddBtn.setAttribute('aria-expanded', 'false');
+    ddBtn.focus();
   });
 }
 
@@ -37,11 +43,23 @@ const menuOpen = document.getElementById('menuOpen');
 const menuClose = document.getElementById('menuClose');
 if (menu && menuOpen){
   menuOpen.addEventListener('click', () => {
-    menu.classList.add('open'); document.body.style.overflow = 'hidden';
+    menu.classList.add('open');
+    menuOpen.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    menuClose?.focus();
   });
-  const closeMenu = () => { menu.classList.remove('open'); document.body.style.overflow = ''; };
-  menuClose.addEventListener('click', closeMenu);
+  const closeMenu = () => {
+    menu.classList.remove('open');
+    menuOpen.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+  menuClose?.addEventListener('click', closeMenu);
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  menu.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    closeMenu();
+    menuOpen.focus();
+  });
 }
 
 /* ── Newsletter ───────────────────────────────────────────── */
