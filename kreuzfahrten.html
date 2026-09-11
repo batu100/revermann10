@@ -178,6 +178,7 @@
       </div>
 
       <form class="form-card reveal" id="cruiseForm" novalidate>
+        <div class="form-honeypot" aria-hidden="true"><label for="cf-website">Website</label><input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
         <div class="field"><label for="cf-vorname">Vorname *</label><input id="cf-vorname" type="text" placeholder="Maria" required></div>
         <div class="field"><label for="cf-nachname">Nachname *</label><input id="cf-nachname" type="text" placeholder="Schmidt" required></div>
         <div class="field"><label for="cf-mail">E-Mail</label><input id="cf-mail" type="email" placeholder="maria@beispiel.de"></div>
@@ -207,7 +208,7 @@
         <div class="field full"><label for="cf-nachricht">Nachricht</label><textarea id="cf-nachricht" placeholder="Besondere Wünsche, Fragen, Anreise ab Badbergen …"></textarea></div>
         <label class="checkbox-row"><input type="checkbox" id="cf-datenschutz" required><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *</span></label>
         <div class="submit-row"><span class="hint">Unverbindlich · wir melden uns persönlich</span><button type="submit" class="btn btn-primary">Kreuzfahrt anfragen <span class="arr">→</span></button></div>
-        <div class="form-success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Vielen Dank!</b> Es öffnet sich Ihr E-Mail-Programm mit der vorbereiteten Anfrage – bitte nur noch absenden. Wir melden uns persönlich bei Ihnen.</span></div>
+        <div class="form-success" role="status" aria-live="polite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Vielen Dank!</b> Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns persönlich bei Ihnen.</span></div>
       </form>
     </div>
   </div>
