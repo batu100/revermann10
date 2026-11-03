@@ -19,6 +19,30 @@
 <meta property="og:image:alt" content="Skireise Karlsbad 2027 · Bustouristik Revermann">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="assets/style.css">
+<!-- Matomo -->
+<script>
+var _paq = window._paq = window._paq || [];
+/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+var u="//statistiken.eurobus.de/";
+_paq.push(['setTrackerUrl', u+'matomo.php']);
+_paq.push(['setSiteId', '4']);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<!-- End Matomo Code -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0QB53FVF8R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0QB53FVF8R');
+</script>
 </head>
 <body>
 <header class="site-header">
@@ -222,7 +246,6 @@
         <a href="impressum.html">Impressum</a>
         <a href="agb.html">AGB</a>
         <a href="datenschutz.html">Datenschutz</a>
-        <a href="#" data-consent-open>Cookie-Einstellungen</a>
       </div>
     </div>
   </div>
@@ -233,6 +256,6 @@
   <a href="kontakt.html" class="btn btn-primary">Reise anfragen</a>
 </div>
 
-<script src="assets/app.js"></script><script src="assets/consent.js" defer></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

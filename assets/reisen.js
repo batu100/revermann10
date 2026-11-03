@@ -93,7 +93,7 @@
       <div><h5>Reisen</h5><ul><li><a href="reisen.html">Aktuelle Reisen</a></li><li><a href="busreisen.html">Busreisen &amp; Tagesfahrten</a></li><li><a href="skireise-karlsbad.html">Skireise Karlsbad</a></li><li><a href="gruppenreisen.html">Gruppenreisen</a></li></ul></div>
       <div><h5>Kreuzfahrten &amp; Rad</h5><ul><li><a href="kreuzfahrten.html">Kreuzfahrten</a></li><li><a href="radreisen.html">Radreisen im Artland</a></li><li><a href="fahrradanhaenger-mieten.html">Fahrradanhänger mieten</a></li></ul></div>
       <div><h5>Service</h5><ul><li><a href="reiseschutz.html">Reiseschutz</a></li><li><a href="kontakt.html">Kontakt &amp; Anfrage</a></li><li><a href="tel:+491723415004">Mobil: 0172 3415004</a></li><li><a href="tel:+4954313415">Festnetz: 05431 3415</a></li><li><a href="mailto:info@revermann.de">info@revermann.de</a></li></ul></div>
-    </div><div class="footer-bottom"><span>© <span id="year">2026</span> Bustouristik Revermann · Ihr Reisepartner aus dem Artland</span><div class="legal"><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a><a href="datenschutz.html">Datenschutz</a><a href="#" data-consent-open>Cookie-Einstellungen</a></div></div></div></footer>
+    </div><div class="footer-bottom"><span>© <span id="year">2026</span> Bustouristik Revermann · Ihr Reisepartner aus dem Artland</span><div class="legal"><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a><a href="datenschutz.html">Datenschutz</a></div></div></div></footer>
     <div class="mobile-cta"><a href="tel:+491723415004" class="btn btn-ghost">Anrufen</a><a href="kontakt.html" class="btn btn-primary">Reise anfragen</a></div>`;
 
   function card(key, trip, featured) {
